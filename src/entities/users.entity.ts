@@ -9,12 +9,20 @@ export class UserEntity extends BaseEntity implements User {
 
   @Column()
   @IsNotEmpty()
+  name: string;
+
+  @Column()
+  @IsNotEmpty()
   @Unique(['email'])
   email: string;
 
   @Column()
   @IsNotEmpty()
   password: string;
+
+  @Column()
+  @IsNotEmpty()
+  role: string;
 
   @Column()
   @CreateDateColumn()
